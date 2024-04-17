@@ -31,7 +31,7 @@ export const Navbar2 = (props: Navbar2Props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const genericHamburgerLine = `h-[2px] w-6 my-[3px] bg-black transition ease-in-out transform duration-300 lg:hidden`;
   return (
-    <nav className="flex h-auto min-h-16 w-full items-center border-b border-black bg-white px-[5%] lg:min-h-18">
+    <nav className="flex h-auto min-h-16 w-full items-center border-b border-black bg-white px-[5%] lg:min-h-18 md:z-100">
       <div className="mx-auto flex h-full w-full auto-cols-fr items-center justify-between gap-4 lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr]">
         <div className="flex min-h-16 flex-shrink-0 items-center">
           <img src={logo.src} alt={logo.alt} />
@@ -114,12 +114,12 @@ const NavItemDropdown = ({ title, subLinks }: { title: string; subLinks: LinkPro
             key={`${subLink.title}-${index}`}
             className="relative whitespace-nowrap py-3 text-center align-top text-base lg:px-4 lg:py-2 lg:text-left"
           >
-            <a
+            <Link
               href={subLink.url}
               className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2"
             >
               {subLink.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -133,9 +133,12 @@ export const Navbar2Defaults: Navbar2Props = {
     alt: "Logo image",
   },
   links: [
+    {title: "Home", url: "/"}, 
+    {title: "About", url: "/about"},
     { title: "Onboarding", url: "/onboarding" },
     { title: "Partners", url: "/partners" },
     { title: "Marketplace", url: "/marketplace" },
+    {title: "Contact", url: "/contact"}, 
     {
       title: "Engage",
       url: "#",

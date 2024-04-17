@@ -1,8 +1,15 @@
+import { Header76, Header76Defaults } from "./HeroComponent"
+import { Layout16, Layout16Defaults } from "./LayoutComponent"
+import { Layout242, Layout242Defaults } from "./Layout2Component"
+import { Faq7, Faq7Defaults } from "./FAQComponent"
+
 export default async function Page(){
     return (
         <>
-            <h2>Onboarding has never been so fun</h2>
-            <p>Welcome to Witwaterstrand Employee Oboarding.</p>
+            <Header76 {...Header76Defaults} />
+            <Layout16 {...Layout16Defaults} /> 
+            <Layout242 {...Layout242Defaults} /> 
+            <Faq7 {...Faq7Defaults}/>
         </>
     )
 }
