@@ -2,6 +2,7 @@
 
 import clsx from "clsx";
 import { useState } from "react";
+import Link from "next/link";
 import { SolidChevronDown, Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 
@@ -46,12 +47,12 @@ export const Navbar2 = (props: Navbar2Props) => {
               {link.subLinks && link.subLinks.length > 0 ? (
                 <NavItemDropdown subLinks={link.subLinks} title={link.title} />
               ) : (
-                <a
+                <Link
                   href={link.url}
                   className="relative block py-3 text-center text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 lg:px-4 lg:py-2 lg:text-base"
                 >
                   {link.title}
-                </a>
+                </Link>
               )}
             </li>
           ))}
@@ -132,22 +133,22 @@ export const Navbar2Defaults: Navbar2Props = {
     alt: "Logo image",
   },
   links: [
-    { title: "Link One", url: "#" },
-    { title: "Link Two", url: "#" },
-    { title: "Link Three", url: "#" },
+    { title: "Onboarding", url: "/onboarding" },
+    { title: "Partners", url: "/partners" },
+    { title: "Marketplace", url: "/marketplace" },
     {
-      title: "Link Four",
+      title: "Engage",
       url: "#",
       subLinks: [
-        { title: "Link Five", url: "#" },
-        { title: "Link Six", url: "#" },
-        { title: "Link Seven", url: "#" },
+        { title: "Appreciate", url: "/appreciate" },
+        { title: "Celebrate", url: "/celebrate" },
+        { title: "Nominate", url: "/nominate" },
       ],
     },
   ],
   buttons: [
     {
-      title: "Button",
+      title: "Sign In",
       variant: "primary",
       size: "sm",
     },
