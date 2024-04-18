@@ -1,5 +1,5 @@
 "use client";
-
+import {useSession, signOut, signIn} from "next-auth/react"; 
 import clsx from "clsx";
 import { useState } from "react";
 import Link from "next/link";
@@ -24,6 +24,7 @@ type Props = {
 export type Navbar2Props = React.ComponentPropsWithoutRef<"section"> & Props;
 
 export const Navbar2 = (props: Navbar2Props) => {
+
   const { logo, links, buttons } = {
     ...Navbar2Defaults,
     ...props,
@@ -60,7 +61,13 @@ export const Navbar2 = (props: Navbar2Props) => {
         <div className="flex min-h-16 items-center justify-end gap-x-4">
           <div>
             {buttons.map((button, index) => (
+              //sign in Button
               <Button
+                onClick={()=>signIn(
+                  'azure-ad',
+                  {callbackUrl:'/onboarding'},
+                  {prompt: 'login'},
+                )}
                 key={`${button.title}-${index}`}
                 variant={button.variant}
                 size={button.size}

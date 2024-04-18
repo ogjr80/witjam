@@ -1,3 +1,4 @@
+
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto_Condensed } from "next/font/google";
@@ -6,7 +7,6 @@ import { Roboto_Condensed } from "next/font/google";
 //components on default layouts
 import { Navbar2, Navbar2Defaults } from "./(component)/NavBar";
 import { Footer2, Footer2Defaults } from "./(component)/FooterComponent";
-
 const roboto_condensed = Roboto_Condensed({subsets: ["latin"]})
 
 export const metadata: Metadata = {
