@@ -35,7 +35,7 @@ export const Navbar2 = (props: Navbar2Props) => {
     <nav className="flex h-auto min-h-16 w-full items-center border-b border-black bg-white px-[5%] lg:min-h-18 md:z-100">
       <div className="mx-auto flex h-full w-full auto-cols-fr items-center justify-between gap-4 lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr]">
         <div className="flex min-h-16 flex-shrink-0 items-center">
-          <img src={logo.src} alt={logo.alt} />
+            <img src={logo.src} alt={logo.alt} />
         </div>
         <ul
           className={clsx(
@@ -136,23 +136,22 @@ const NavItemDropdown = ({ title, subLinks }: { title: string; subLinks: LinkPro
 
 export const Navbar2Defaults: Navbar2Props = {
   logo: {
-    src: "https://relume-assets.s3.amazonaws.com/logo-image.svg",
+    src: "https://www.wits.ac.za/media/wits-university-style-assets/images/Wits_Centenary_Logo_Large.svg",
     alt: "Logo image",
   },
   links: [
-    {title: "Home", url: "/"}, 
-    {title: "About", url: "/about"},
     { title: "Onboarding", url: "/onboarding" },
-    { title: "Partners", url: "/partners" },
-    { title: "Marketplace", url: "/marketplace" },
-    {title: "Contact", url: "/contact"}, 
+    { title: "Say thanks", url: "/appreciate" },
+    { title: "Celebrate", url: "/celebrate" },
+    {title: "Nominate", url: "/nominate"}, 
+   
     {
-      title: "Engage",
+      title: "More",
       url: "#",
       subLinks: [
-        { title: "Appreciate", url: "/appreciate" },
-        { title: "Celebrate", url: "/celebrate" },
-        { title: "Nominate", url: "/nominate" },
+        { title: "Marketplace", url: "/marketplace" },
+        { title: "Partners", url: "/partners" },
+        { title: "Rewards", url: "/rewards" },
       ],
     },
   ],

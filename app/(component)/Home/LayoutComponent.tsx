@@ -67,7 +67,7 @@ export const Layout16 = (props: Layout16Props) => {
 
 export const Layout16Defaults: Layout16Props = {
   tagline: "Streamline",
-  heading: "Unlock Your  Potential with Onboarding",
+  heading: "Unlock Your  Potential",
   description:
     "Completing the onboarding process offers numerous benefits, including access to essential services and seamless integration into our University culture.",
   features: [
@@ -87,7 +87,7 @@ export const Layout16Defaults: Layout16Props = {
   ],
   buttons: [
     { title: "Learn More", variant: "primary" },
-    { title: "Sign Up", variant: "link", size: "link", iconRight: <ChevronRight /> },
+    // { title: "Sign Up", variant: "link", size: "link", iconRight: <ChevronRight /> },
   ],
   image: {
     src: "https://images.pexels.com/photos/1181421/pexels-photo-1181421.jpeg?auto=compress&cs=tinysrgb&w=600",

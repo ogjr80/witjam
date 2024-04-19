@@ -1,6 +1,5 @@
 
-
-import { Layout4, Layout4Defaults } from "./HeroMarketplace"
+import { Layout4, Layout4Defaults } from "./HeroRewards"
 export default function Page(){
     return (
         <>

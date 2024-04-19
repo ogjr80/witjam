@@ -1,8 +1,9 @@
+import { Layout4,Layout4Defaults } from "./HeroPartner"
+
 export default function Page(){
     return (
         <>
-            <h2>Partners</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ipsa?</p>
+            <Layout4 {...Layout4Defaults} /> 
         </>
     )
 }

@@ -1,13 +1,15 @@
 
 import "./globals.css";
 import type { Metadata } from "next";
-import { Roboto_Condensed } from "next/font/google";
+import { Roboto_Serif } from "next/font/google";
 
 
 //components on default layouts
 import { Navbar2, Navbar2Defaults } from "./(component)/NavBar";
-import { Footer2, Footer2Defaults } from "./(component)/FooterComponent";
-const roboto_condensed = Roboto_Condensed({subsets: ["latin"]})
+// import { Footer2, Footer2Defaults } from "./(component)/FooterComponent";
+import { Footer4, Footer4Defaults } from "./(component)/FooterComponent";
+const roboto_serif = Roboto_Serif({subsets: ["latin"]})
+
 
 export const metadata: Metadata = {
   title: "Witwaterstrand Onboarding Platform",
@@ -21,10 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto_condensed.className}>
+      <body className={roboto_serif.className}>
         <Navbar2 {...Navbar2Defaults}/>
         {children}
-        <Footer2 {...Footer2Defaults}/> 
+        <Footer4{...Footer4Defaults}/> 
         </body>
     </html>
   );

@@ -71,33 +71,35 @@ export const Header76 = (props: Header76Props) => {
 };
 
 export const Header76Defaults: Header76Props = {
-  heading: "Simplify Your Onboarding",
+  heading: "We Recognise Years of Service",
   description:
-    "Welcome to our onboarding process. We make it easy for you to get started and provide all the necessary information and tools you need to succeed.",
-  buttons: [{ title: "Getting Started" }, { title: "Learn More", variant: "secondary" }],
+    "Each milestone, work anniversary, and year of service deserves celebration. We go beyond traditional pins, plagues, or cards by offering exceptional award to those who propel Witwaterstrand forward.",
+  buttons: [{ title: "Getting Started" }, 
+  // { title: "Learn More", variant: "secondary" }
+],
   images: [
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Placeholder image 1",
     },
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       alt: "Placeholder image 2",
     },
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.pexels.com/photos/845451/pexels-photo-845451.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Placeholder image 3",
     },
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.pexels.com/photos/2422278/pexels-photo-2422278.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Placeholder image 4",
     },
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80",
       alt: "Placeholder image 5",
     },
     {
-      src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+      src: "https://images.pexels.com/photos/1181421/pexels-photo-1181421.jpeg?auto=compress&cs=tinysrgb&w=600",
       alt: "Placeholder image 6",
     },
   ],
