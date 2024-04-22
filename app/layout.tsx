@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto_Serif } from "next/font/google";
 
+import AuthProvider from "./AuthProvider";
 
 //components on default layouts
 import { Navbar2, Navbar2Defaults } from "./(component)/NavBar";
@@ -22,6 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <AuthProvider>
     <html lang="en">
       <body className={roboto_serif.className}>
         <Navbar2 {...Navbar2Defaults}/>
@@ -29,5 +31,6 @@ export default function RootLayout({
         <Footer4{...Footer4Defaults}/> 
         </body>
     </html>
+    </AuthProvider>
   );
 }

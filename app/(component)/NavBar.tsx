@@ -1,10 +1,11 @@
 "use client";
-import {useSession, signOut, signIn} from "next-auth/react"; 
+
 import clsx from "clsx";
 import { useState } from "react";
 import Link from "next/link";
 import { SolidChevronDown, Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
+import {useSession, signOut, signIn} from "next-auth/react"; 
 
 type LinkProps = {
   title: string;
@@ -21,9 +22,28 @@ type Props = {
   buttons: ButtonProps[];
 };
 
+
+
 export type Navbar2Props = React.ComponentPropsWithoutRef<"section"> & Props;
 
+
+
+
 export const Navbar2 = (props: Navbar2Props) => {
+  
+   //new code
+ const {data: session} = useSession(); 
+ //new code end here
+
+ //new code 2
+
+ const handleAuthButtonClick = () => {
+   if(session) {
+     signOut({callbackUrl: '/'}); 
+   } else { 
+     signIn('azure-ad', {callbackUrl: '/dashboard'}, {prompt: 'login'}); 
+   }
+ }; 
 
   const { logo, links, buttons } = {
     ...Navbar2Defaults,
@@ -60,20 +80,22 @@ export const Navbar2 = (props: Navbar2Props) => {
         </ul>
         <div className="flex min-h-16 items-center justify-end gap-x-4">
           <div>
-            {buttons.map((button, index) => (
+          {buttons.map((button, index) => (
               //sign in Button
               <Button
-                onClick={()=>signIn(
-                  'azure-ad',
-                  {callbackUrl:'/onboarding'},
-                  {prompt: 'login'},
-                )}
+                // onClick={()=>signIn(
+                //   'azure-ad',
+                //   {callbackUrl:'/onboarding'},
+                //   {prompt: 'login'},
+                // )}
+                onClick={handleAuthButtonClick}
                 key={`${button.title}-${index}`}
                 variant={button.variant}
                 size={button.size}
                 className="px-4 py-1 md:px-6 md:py-2"
               >
-                {button.title}
+                {/* {button.title} */}
+                {session ? 'Sign Out': 'Sign In'}
               </Button>
             ))}
           </div>
