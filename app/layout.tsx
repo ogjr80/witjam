@@ -10,6 +10,7 @@ import { Navbar2, Navbar2Defaults } from "./(component)/NavBar";
 // import { Footer2, Footer2Defaults } from "./(component)/FooterComponent";
 import { Footer4, Footer4Defaults } from "./(component)/FooterComponent";
 const roboto_serif = Roboto_Serif({subsets: ["latin"]})
+import { useSession } from "next-auth/react";
 
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <AuthProvider>
+      
     <html lang="en">
       <body className={roboto_serif.className}>
         <Navbar2 {...Navbar2Defaults}/>

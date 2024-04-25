@@ -1,0 +1,75 @@
+/* SideNavigation.module.css */
+.sideNav {
+  width: 250px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  margin-bottom: 10px;
+}
+
+.link {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.submenuPanel {
+  background: #e8e8e8;  /* Slightly darker than the main nav */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.submenuList {
+  list-style: none;
+  padding: 0;
+}
+
+.submenuItem {
+  margin-top: 5px;
+}
+
+.submenuItem:first-child {
+  margin-top: 0;
+}
+
+.navigationContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.sideNav {
+  width: 250px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto; /* For scrolling if the menu is long */
+}
+
+.submenuPanel {
+  width: 200px; /* Adjust width as needed */
+  background: #e8e8e8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* For scrolling if the submenu is long */
+}
+
+
