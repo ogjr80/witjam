@@ -1,11 +1,14 @@
 import NextAuth from 'next-auth'; 
 import type { NextAuthOptions } from 'next-auth';
-import AzureAD from 'next-auth/providers/azure-ad';
 import AzureADProvider from 'next-auth/providers/azure-ad'; 
+import { PrismaAdapter } from '@next-auth/prisma-adapter';
+import { prisma } from '@/lib/prisma';
 
 const env = process.env; 
 
 export const authOptions : NextAuthOptions = {
+    //adapter: PrismaAdapter(prisma),
+    // secret: process.env.NEXTAUTH_SECRET,
     providers: [
         AzureADProvider({
           clientId: `${env.NEXT_PUBLIC_AZURE_AD_CLIENT_ID}`,
@@ -45,7 +48,5 @@ export const authOptions : NextAuthOptions = {
       //   },
 
 }; 
-
-
 const handler =  NextAuth(authOptions); 
 export {handler as GET, handler as POST}
